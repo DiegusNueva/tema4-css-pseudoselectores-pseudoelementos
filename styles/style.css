@@ -1,0 +1,63 @@
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+/* Utilizando únicamente pseudoselectores da color de fondo salmón claro a las casillas que contien horas */
+
+tbody tr td:first-child {
+  background-color: rgb(248, 203, 173);
+}
+
+/* Aplica un fondo de color salmón claro a las celdas de encabezado (th) que están dentro de la fila de encabezado (tr) en la sección de encabezado de la tabla (thead). */
+thead tr th {
+  background-color: rgb(248, 203, 173);
+}
+
+/* Cambiar los estado de los enlaces para que:
+
+ Nunca estén subrayados
+ Si están visitados se muestren en rojo
+ Si no están visitado se muestren en verde */
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: green;
+}
+
+a:visited {
+  color: red;
+}
+
+/* Utilizando pseudoselectores hacer que cuando pasemos el ratón sobre la columna del viernes
+aumente el tamaño de letra al doble */
+
+tr th:last-child:hover,
+tr td:last-child:hover {
+  font-size: 2em;
+}
+
+/* Utilizando pseudoelementos: haz que la primera letra de los días tenga el doble de tamaño*/
+thead tr th::first-letter {
+  font-size: 2em;
+}
+
+/* Añade un borde rojo que esté separado 5 px a los campos obligatorios */
+input:required {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+/* Añade un * en rojo detrás de las etiquetas */
+label::after {
+  color: red;
+  content: "*";
+}
